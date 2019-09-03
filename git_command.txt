@@ -1,0 +1,18 @@
+git --version
+git config --global user.name haystar
+git config --global user.email hanayoung09@gmail.com
+cd C:\project\WorkSpace
+git clone https://github.com/haystar/Web_project.git
+cd Web_project
+git add name.확장자
+git commit -m "메세지"
+git push // -f 강제 push
+git status //변경사항
+git reset //add 취소
+git add . //모든파일 add
+git checkout -- 파일이름 //수정전으로돌림
+git pull 
+git log //엔터치면 다음페이지 q 누르면끝 해시값으로 돌아갈수잇음
+ -> git reset --hard 해시값 //soft option
+git commit --amend //commit 메세지 변경
+-> a눌러서 수정모드 + 수정하고 + esc 누르고 :wq!
