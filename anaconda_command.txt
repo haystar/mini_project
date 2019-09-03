@@ -1,0 +1,46 @@
+#아나콘다 버전 확인
+conda --version
+
+#아나콘다 업데이트
+conda update conda
+
+#아나콘다 가상환경 생성
+conda create --name(-n) 가상환경명 설치할패키지
+
+#예) 파이썬 3.7 버전 설치 & test 이름으로 가상환경 생성
+conda create --name test python=3.7
+
+#또는
+conda create --n test python=3.7
+
+#python아나콘다 가상환경 활성화(Activate), 비활성화(Deactivate)
+#설치 된 가상환경 리스트 확인
+conda info --envs
+
+#가상환경 활성화(아나콘다 프롬프트에서!)
+#예) activate test
+activate 가상환경명
+
+#가상환경 비활성화(아나콘다 프롬프트에서!)
+#예) deactivate test
+deactivate 가상환경명
+
+#패키지 설치
+#예)conda install 패키지명
+conda install simplejson
+
+#패키지 리스트 확인
+conda list
+
+#패키지 삭제
+#예)conda remove --name test --all
+conda remove --name 가상환경명 --all
+
+#또는
+conda remove -n 가상환경명 --all
+
+#아나콘다 클린
+conda clean --all
+
+#또는
+conda clean -a
