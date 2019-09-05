@@ -1,0 +1,8 @@
+from urllib.parse import urljoin (url 편집기)
+soup.html.body.h1
+soup.prettify () //html 예쁘게
+soup. find_all ("a", string = "daum") // href = ""도 가능
+soup.find_all(string = ["naver","daum"])
+soup.find_all("a", limit=2) //개수
+
+a.attrs['href'] //속성뽑아내기
