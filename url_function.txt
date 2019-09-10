@@ -1,8 +1,30 @@
+urlretrieve --> 파일을 직접 다운로드
+urlopen --> 메모리로딩
+
+urllib.request 데이터파일을 받아오는 라이브러리
+urllib.parse url주소를 편집, 파싱, 조합하는 라이브러리
+
 from urllib.parse import urljoin (url 편집기)
 soup.html.body.h1
 soup.prettify () //html 예쁘게
 soup. find_all ("a", string = "daum") // href = ""도 가능
 soup.find_all(string = ["naver","daum"])
 soup.find_all("a", limit=2) //개수
-
+soup.find(id = "naver")
 a.attrs['href'] //속성뽑아내기
+li:nth-of-type(n)  //이렇게하면 list목록에서 n번째있는것들이 나옴
+soup.find(id="ac-list").find("li",param) //이중으로
+select하면 무조건 배열로나오므로 하나여도 인덱스붙여서 출력하기
+ 
+선택자를 이용해서 찾는건 find는 안되는거같음 select만
+soup.select_one("div > ul > li:nth-of-type(2)")
+div#main //id > ul.lecs //class > li
+속성값을 이용해서 뽑아올때 
+예를들어
+<li class="alcohol high" data-lo="cn">양주</li> 라면 
+li [data-lo = 'cn'] 처럼
+
+param을 이용해 선택할때
+soup.find("li", param).string
+html파일 뽑아올때
+fp = open("food-list.html",encoding="utf-8")
