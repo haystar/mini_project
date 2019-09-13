@@ -28,3 +28,5 @@ param을 이용해 선택할때
 soup.find("li", param).string
 html파일 뽑아올때
 fp = open("food-list.html",encoding="utf-8")
+
+urlretrieve(select()) 해도됨
